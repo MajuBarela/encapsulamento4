@@ -3,7 +3,7 @@ public class Perfil {
     private String nome;
     private int idade;
     private String username;
-    private int senha;
+    private String senha;
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -29,15 +29,15 @@ public class Perfil {
         return this.username;
     }
 
-    public void setSenha(int senha) {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 
-    public int getSenha() {
+    public String getSenha() {
         return this.senha;
     }
 
-    public Perfil(String nome, int idade, String username, int senha) {
+    public Perfil(String nome, int idade, String username, String senha) {
         this.nome = nome;
         this.idade = idade;
         this.username = username;
@@ -45,6 +45,14 @@ public class Perfil {
     }
 
     public Perfil() {
-        
+
+    }
+
+    public boolean verificarSenha(String senha) {
+        return this.senha.equals(senha);
+    }
+
+    public void alterarSenha(String novaSenha) {
+        this.senha = novaSenha;
     }
 }

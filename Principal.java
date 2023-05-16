@@ -2,17 +2,17 @@ public class Principal {
     
     public static void main (String [] args) {
 
-        Perfil perfil = new Perfil();
+        Perfil perfil = new Perfil("Maria Julia", 16, "MajuBarela", "1906");
 
-        perfil.setNome("Maria Julia Barela Netto");
-        perfil.setIdade(17);
-        perfil.setUsername("MajuBarela");
-        perfil.setSenha(1906);
+        System.out.println("Nome: " + perfil.getNome());
+        System.out.println("Idade: " + perfil.getIdade());
+        System.out.println("Username: " + perfil.getUsername());
+        perfil.setSenha("mj0606");
 
-        System.out.println("O nome é: " + perfil.getNome());
-        System.out.println("A idade é: " + perfil.getIdade());
-        System.out.println("O username é: " + perfil.getUsername());
-        System.out.println("A senha é: " + perfil.getSenha());
-
+        if(perfil.verificarSenha("MJ1906")) {
+            System.out.println("Senha válida!");
+        } else {
+            System.out.println("Senha inválida!");
+        }
     }
 }
